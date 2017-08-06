@@ -1,0 +1,35 @@
+// This is an example of the JSON that Akrasia will use to configure the integration
+{
+  // The key is a unique slug that identifies each integration:
+  "beeminder_forum_posts": {
+    // The title of the integration (to be displayed to users):
+    "title": "Beeminder Forum Posts Count",
+    
+    // The description of the integration (to be displayed to users) (optional):
+    "description": "Use an odometer goal for this integration.",
+    
+    // A "category" for the integration (to be displayed to users) (optional):
+    "category": "Fun",
+    
+    // The endpoint that Akrasia will call when it wants a new datapoint fetched.
+    // See server.js for an example implementation to handle this request.
+    "fetch_url": "https://forum-minder.glitch.me/fetch",
+    
+    // The configuration/options for this integration.
+    // Akrasia will ask users to provide these fields when setting up the integration.
+    // These values will be passed to the fetch_url when Akrasia makes a request.
+    // All values will be passed as strings. Parsing and validation should be done by
+    //   the integration's fetch endpoint.
+    "fields": {
+      // A unique field for each key. (Fields will be in request.body.user_options.field_key
+      //   when passed to the integration fetch endpoint)
+      "forum_username": {
+        // The name of the field (to be displayed to users)
+        "name": "Beeminder Forum Username",
+        
+        // Additional description for the field (to be displayed to users) (optional)
+        "description": "Your Beeminder Forum username."
+      }
+    }
+  }
+}
