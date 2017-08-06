@@ -8,9 +8,6 @@
     // The description of the integration (to be displayed to users) (optional):
     "description": "Use an odometer goal for this integration.",
     
-    // A "category" for the integration (to be displayed to users) (optional):
-    "category": "Fun",
-    
     // The endpoint that Akrasia will call when it wants a new datapoint fetched.
     // See server.js for an example implementation to handle this request.
     "fetch_url": "https://forum-minder.glitch.me/fetch",
