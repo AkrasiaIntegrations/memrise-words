@@ -46,7 +46,7 @@ app.post("/fetch", function(req, res) {
       // Create the datapoint with value (and optional comment)
       var result = {
         value: solvedProblemsCount,
-        comment: 'via Akrasia integration: Memrise Points'
+        comment: 'via Akrasia integration: Memrise Words'
       };
 
       // Send the datapoint to Akrasia
